@@ -1,6 +1,7 @@
+
 .container {
   min-height: 100vh;
-  padding: 0 0.5rem;
+  /* padding: 0 0.5rem; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -23,6 +24,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  /* bottom: 0; */
+  position: sticky;
+  background-color: black;
+  color: white;
 }
 
 .footer img {
@@ -82,7 +87,7 @@
 
 .card {
   margin: 1rem;
-  flex-basis: 45%;
+  flex-basis: 100%;
   padding: 1.5rem;
   text-align: left;
   color: inherit;
@@ -112,6 +117,24 @@
 
 .logo {
   height: 1em;
+}
+.nav{
+  position: sticky;
+  top: 0;
+  height: 5em;
+  display: flex;
+  box-shadow: 0 0 2px black;
+  z-index:5;
+  background-color: black;
+  color: white;
+
+}
+.nav h1{
+  margin-left: 1em;
+}
+.body{
+  margin: 0;
+  padding: 0;
 }
 
 @media (max-width: 600px) {
