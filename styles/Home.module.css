@@ -131,3 +131,7 @@
 .prev:hover,.prev:focus,.prev:active, .next:hover,.next:focus,.next:active{
   transform: scale(0.25);
 }
+
+.arrow{height: 30vmin;
+
+}

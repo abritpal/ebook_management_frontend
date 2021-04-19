@@ -8,6 +8,7 @@
   width: 400px;
   transition: all 0.2s ease-in-out;
   margin-right: 10px;
+  cursor: pointer;
 }
 
 .book_card:hover,

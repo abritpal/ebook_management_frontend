@@ -5,6 +5,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import BookCard from '../public/components/book_card'
 import { useState, useEffect, useRef } from 'react'
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export default function Home() {
   const data = [
@@ -188,11 +189,15 @@ export default function Home() {
             <div className={styles.section_title}>
               <h2>New Arrivals</h2>
               <div className={styles.prevNext_wrapper}>
-                <div className={styles.prev} onClick={(e) => {document.querySelector("."+styles.book_list2+" ."+styles.scroll_books).scrollLeft -= 1290}}>
-                  <svg class="svg-triangle" width='100' height='100'>
+                <a className={styles.prev} onClick={(e) => {document.querySelector("."+styles.book_list2+" ."+styles.scroll_books).scrollLeft -= 1290}}>
+                  {/* <svg className="svg-triangle" width='100' height='100'>
                     <polygon points="0,50 100,0 100,100" />
-                  </svg>
-                </div>
+                  </svg> */}
+                <svg xmlns="http://www.w3.org/2000/svg" className={styles.arrow} viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm.707-10.293a1 1 0 00-1.414-1.414l-3 3a1 1 0 000 1.414l3 3a1 1 0 001.414-1.414L9.414 11H13a1 1 0 100-2H9.414l1.293-1.293z" clip-rule="evenodd" />
+                </svg>
+                {/* <FontAwesomeIcon icon={["fas", "instagram"]}></FontAwesomeIcon> */}
+                </a>
                 <div className={styles.next} onClick={(e) => {document.querySelector("."+styles.book_list2+" ."+styles.scroll_books).scrollLeft += 1290}}>
                   <svg class="svg-triangle" width='100' height='100'>
                     <polygon points="100,50 0,100 0,0" />

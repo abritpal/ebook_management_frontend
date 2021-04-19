@@ -3,7 +3,8 @@ import Image from 'next/image'
 
 export default function BookCard(props){
     
-    return (<div className={styles.book_card}>
+    return (
+        <div className={styles.book_card}>
         <div className={styles.left_image_panel}>
             <Image src={props.src} height="218px" width="136px"></Image>
         </div>
