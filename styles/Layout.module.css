@@ -13,39 +13,72 @@
   z-index:3;
   background-color: black;
   color: white;
-  opacity:0.75;
+  /* opacity:0.9; */
 }
 .nav .left{
   position: relative;
   left: 3rem;
   /* bottom: 0.4rem; */
+  display: flex;
+  justify-content: center;
+  align-items:center;
   /* color: black; */
+  cursor: pointer;
   opacity:1;
 }
 .nav ul{
   position: relative;
   list-style-type: none;
   display: flex;
+  align-items: center;
+
   right: 4rem;
   margin: 0;
+  height: 100%;
 }
 .nav ul li{
-  padding-right: 0.75em;
-  padding-left: 0.75em;
-  opacity:1;
+  width: 4em;
+  height: 100%;
+  /* border-left: 1px solid white; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin-left: 0.1em; */
+  /* padding-right: 0.75em; */
+  /* padding-left: 0.75em; */
+  /* opacity:1; */
 }
-.nav_down{
+.nav > ul > li:hover{
+    /* border-bottom: 4px solid #fff; */
+    cursor: pointer;
+    background-color: white;
+    color: black;
+  transition: all 0.2s ease-out;
+}
+.bars{
+  /* background-color: black; */
+  position: relative;
+  bottom: 0.5em;
+}
+
+.nav ul li:hover .bar,.bars:hover .bar{
+  /* background-color: black; */
+  cursor: pointer;
   background-color: black;
 }
 
+
 .cart{
-  position: relative;
-  top: 0.2em;
+  /* position: relative; */
+  /* top: 0.2em; */
+}
+.cart_icon{
+  height: 25px;
 }
 .bar{
   background: white;
   position: relative;
-  /* top: 0.5em; */
+  top: 0.5em;
   height: 0.1em;
   width: 1.5em;
   margin-top: 0.3em;
