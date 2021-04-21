@@ -18,9 +18,12 @@
 .nav .left{
   position: relative;
   left: 3rem;
-  /* bottom: 0.4rem; */
+  bottom: 0.4rem;
   /* color: black; */
   opacity:1;
+}
+.left{
+  cursor:pointer;
 }
 .nav ul{
   position: relative;
@@ -34,6 +37,12 @@
   padding-left: 0.75em;
   opacity:1;
 }
+.nav > ul > li:hover{
+    /* border-bottom: 4px solid #fff; */
+    background-color: white;
+    color: black;
+  transition: all 0.2s ease-out;
+}
 .nav_down{
   background-color: black;
 }
@@ -42,10 +51,13 @@
   position: relative;
   top: 0.2em;
 }
+.cart_icon{
+  height: 25px;
+}
 .bar{
   background: white;
   position: relative;
-  /* top: 0.5em; */
+  top: 0.5em;
   height: 0.1em;
   width: 1.5em;
   margin-top: 0.3em;
