@@ -16,16 +16,38 @@ export default function Cart(props) {
             userID: "",
             books: [
                 {
-                    ID: "007",
-                    BookName: "a",
-                    Author: "a",
-                    Price: "200",
+                    bookId: 3,
+                    title: "The Boy in the Striped Pyjamas",
+                    author: "John Boyne",
+                    genre: "Fiction",
+                    img: "the_boy_in_striped_pajamas.jpg",
+                    price: "210",
+                    date: "31-05-2007",
+                    desc: "The story of The Boy in the Striped Pyjamas is very difficult to describe. Usually we give some clues about the book on the back cover, but in this case we think that would spoil the reading of the book. We think it is important that you start to read without knowing what it is about.If you do start to read this book, you will go on a journey with a nine- year - old boy called Bruno. (Though this isn't a book for nine-year-olds. And sooner or later you will arrive with Bruno at a fence.Fences like this exist all over the world. We hope you never have to encounter such a fence.",
+                    rating: "4.2"
                 },
                 {
-                    ID: "003",
-                    BookName: "a",
-                    Author: "a",
-                    Price: "2",
+                    bookId: 4,
+                    title: "The Book of Gold Leaves",
+                    author: "Mirza Waheed",
+                    genre: "Fiction",
+                    img: "book_of_gold_leaves.jpg",
+                    price: "450",
+                    date: "01-10-2014",
+                    desc: "'The Book of Gold Leaves' is a heartbreaking love story set in war-torn Kashmir. In an ancient house in the city of Srinagar, Faiz paints exquisite papier mache pencil boxes for tourists. Evening is beginning to slip into night when he sets off for the shrine. There he finds the woman with the long black hair. Roohi begs for the boy of her dreams to come and take her away. She wants a love story, an age-old tale of love, war, temptation, duty and choice.",
+                    rating: "3.7"
+
+                },
+                {
+                    bookId: 5,
+                    title: "Loveboat, Taipei",
+                    author: "Abigail Hing Wen",
+                    genre: "Young Adult",
+                    img: "love_boat_taipei.jpg",
+                    price: "600",
+                    date: "07-01-2020",
+                    desc: "When eighteen-year-old Ever Wong’s parents send her from Ohio to Taiwan to study Mandarin for the summer, she finds herself thrust among the very over-achieving kids her parents have always wanted her to be, including Rick Woo, the Yale-bound prodigy profiled in the Chinese newspapers since they were nine—and her parents’ yardstick for her never-measuring-up life.Unbeknownst to her parents, however, the program is actually an infamous teen meet - market nicknamed Loveboat, where the kids are more into clubbing than calligraphy and drinking snake - blood sake than touring sacred shrines.Free for the first time, Ever sets out to break all her parents’ uber - strict rules—but how far can she go before she breaks her own heart ?",
+                    rating: "3.8"
                 }
             ]
         }
@@ -52,16 +74,16 @@ export default function Cart(props) {
         <div className={styles.book_info_container}>
             <div className={styles.book_container_col_one}>
 
-                <Image src='/../public/book_img.jpg' height="218px" width="136px"></Image>
+                <Image src={'/../public/'+props.img} height="174px" width="108px"></Image>
 
 
                 <button className={styles.buy_button} onClick={(event) => handleClick(event, props.bookID)}>Delete from cart</button>
             </div>
             <div>
-                Hello this is the function
-                <h4>{props.bookName}</h4>
+    
+                <h3>{props.bookName}</h3>
                 <p><strong>Author: </strong>{props.authorName}</p>
-                <p><strong>Price: </strong>₹{props.bookPrice}</p>
+                <p><strong>Price: </strong>₹ {props.bookPrice}</p>
             </div>
         </div>
     );
@@ -82,13 +104,15 @@ export default function Cart(props) {
                
                 <div className={styles.cart_container}>
                     {Items.books.map((book) => {
-                        TotalAmount += parseInt(book.Price)
+                        TotalAmount += parseInt(book.price)
                         return (
                             <CartItems
-                                bookID={book.ID}
-                                bookName={book.bookName}
-                                authorName={book.Author}
-                                bookPrice={book.Price} />)
+                        
+                                bookName={book.title}
+                                authorName={book.author}
+                                bookPrice={book.price}
+                                img= {book.img}
+                                />)
                     })}
 
                 </div>

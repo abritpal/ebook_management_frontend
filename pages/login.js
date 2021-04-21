@@ -39,8 +39,9 @@ export default function Login() {
         console.log("string")
     }
     return (
+        <div className={styles.body}>
         <div className={styles.loginform}>
-            <h2 className={styles.headerTitle}>login</h2>
+            <h2 className={styles.headerTitle}>Login</h2>
             <div className={styles.row}>
                 {/* <label>Username</label> */}
                 <input type="text" placeholder="username" id="username" />
@@ -48,7 +49,7 @@ export default function Login() {
             </div>
             <div className={styles.row}>
                 {/* <label>Password</label> */}
-                <input type="text" placeholder="password" id="password" />
+                <input type="password" placeholder="password" id="password" />
             </div>
             <div className={styles.row}>
                 <p className={ifwrong ? styles.correctpass : styles.wrongpass}>Username or Password incorrect</p>
@@ -56,5 +57,6 @@ export default function Login() {
             </div>
 
         </div>
+    </div>
     )
 }

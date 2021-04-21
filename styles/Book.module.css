@@ -1,7 +1,16 @@
+.big_container{
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr 10fr 1fr;
+    grid-template-rows: 1fr;
+    height: 200%;
+}
 .book_info_container{
+    grid-column: 2/3;
     display: grid;
     grid-template-columns: 1fr 2fr;
     border-radius: 10px;
+    height: 100%;
     padding: 20px;
     margin: 10px;
 }
@@ -9,6 +18,11 @@
     display: grid;
     justify-content: center;
     align-items: center;
+    padding: 20px;
+}
+.book_container_col_two{
+    display: grid;
+    padding: 2em;
 }
 .buy_button{
     background-color: black;
